@@ -1,0 +1,9 @@
+
+# API Key with authorization to create the resources in this script
+ibmcloud_api_key = 
+
+# Address prefixes for the workload vpc
+# This range require IP planning and should be unique for each customer
+#
+# vpc_cidrs = ["10.10.0.0/18","10.20.0.0/18", "10.30.0.0/18"]
+

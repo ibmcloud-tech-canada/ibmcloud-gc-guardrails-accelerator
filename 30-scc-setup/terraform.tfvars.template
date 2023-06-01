@@ -1,0 +1,4 @@
+
+# API Key with authorization to create the resources in this script
+ibmcloud_api_key = 
+

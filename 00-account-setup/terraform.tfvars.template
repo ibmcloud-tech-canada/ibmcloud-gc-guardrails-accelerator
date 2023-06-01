@@ -1,0 +1,51 @@
+
+# API Key with authorization to create the resources in this script
+ibmcloud_api_key = 
+
+# Region where all regional services will be deployed
+# type = string
+# default = "ca-tor"
+# region = 
+
+# MFA level to use for account.  LEVEL1 is email for all users.  TOTP is TOTP for non-federated users.
+# Other options are documented here: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_account_settings
+# type = string
+# default = "LEVEL1"
+# mfa =
+
+# Name of existing resource group into which you will provision Activity Tracker.
+# type = string
+# default = "base-resource-group"
+# resource_group_name = 
+
+
+# Prefix to use in naming convention for account services
+# type        = string
+# default     = "base"
+# prefix =
+
+# Comma-delimited list of IPs and/or IP ranges that allowed access to the account
+# type = string
+# default = "0.0.0.0/0"
+# allowed_ips =
+
+# If restricted, users will need explicit IAM permissions to create service ids.  Allowed values are RESTRICTED, NOT_RESTRICTED, NOT_SET
+# type = string
+# default = "RESTRICTED"
+# restrict_serviceids = "NOT_RESTRICTED"
+
+# If restricted, users will need explicit IAM permissions to create API Keys.  Allowed values are RESTRICTED, NOT_RESTRICTED, NOT_SET
+# type = string
+# default = "RESTRICTED"
+# restrict_apikeys = "NOT_RESTRICTED"
+
+# Plan for Activity tracker, 7-day or 30-day
+# type = string
+# default = "7-day"
+# activity_tracker_plan =
+
+# The default will forward local events from all regions that support event routing.  
+# It will also forward global events like IAM events and COS bucket creation events
+# type = list(string)
+# default = ["us-south","us-east","global"]
+# activity_tracker_route_sources = 
