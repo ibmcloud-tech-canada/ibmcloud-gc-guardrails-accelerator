@@ -32,7 +32,7 @@ For assistance, reach out by email to jared.killoran@ibm.com or behzadk@ca.ibm.c
 
 ## How to run
 
-The automation for setting up your Landing Zone environment has been divided into four steps.  More detail on each step can be found in the README.md for the steps. [00-account-setup](./00-account-setup/README.md) creates some base resources used by [20-scc-setup](/20-scc-setup/README.md)  and [30-workoad](./30-workload/README.md).  
+The automation for setting up your IBM Cloud environment has been divided into three steps.  More detail on each step can be found in the README.md for the steps. [00-account-setup](./00-account-setup/README.md) creates some base resources used by [20-scc-setup](/20-scc-setup/README.md) and [30-workoad](./30-workload/README.md).  
 
 
 | Step | Description |
