@@ -1,4 +1,4 @@
-# Government of Canada Guadrails Accelerator for IBM Cloud
+# Government of Canada Guardrails Accelerator for IBM Cloud
 
 ## Overview
 
