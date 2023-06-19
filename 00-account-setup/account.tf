@@ -33,3 +33,19 @@ resource "ibm_resource_instance" "cos" {
   plan              = "standard"
   location          = "global"
 }
+
+
+# Authorize COS to read KMS key.  
+resource "ibm_iam_authorization_policy" "cos_auth_kp_policy" {
+
+  depends_on = [ 
+    ibm_resource_instance.cos,
+    ibm_resource_instance.key_protect_instance
+  ]
+
+  source_service_name         = "cloud-object-storage"
+  target_service_name         = "kms"
+  target_resource_instance_id = ibm_resource_instance.key_protect_instance.guid
+  roles                       = ["Reader"]
+}
+

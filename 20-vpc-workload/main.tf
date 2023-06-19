@@ -54,21 +54,8 @@ resource "random_string" "cos_random_suffix" {
   min_lower        = 4
 }
 
-# Authorize COS to read KMS key.  
-resource "ibm_iam_authorization_policy" "cos_auth_kp_policy" {
-  source_service_name         = "cloud-object-storage"
-  target_service_name         = "kms"
-  target_resource_instance_id = data.ibm_resource_instance.kms.guid
-  roles                       = ["Reader"]
-}
-
 ## Create a bucket for flowlogs
 resource "ibm_cos_bucket" "flowlogs_bucket" {
-
-  depends_on = [ 
-    ibm_iam_authorization_policy.cos_auth_kp_policy 
-  ]
-
   bucket_name          = "${local.prefix}-flowlogs-${random_string.cos_random_suffix.result}"
   resource_instance_id = data.ibm_resource_instance.cos.id
   region_location      = local.region
